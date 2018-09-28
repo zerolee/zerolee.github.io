@@ -5,11 +5,25 @@
     <link>https://zerolee.github.io/post/</link>
     <description>Recent content in Posts on 琐碎录</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 28 Sep 2018 06:35:31 +0800</lastBuildDate>
+    <language>zh_CN</language>
+    <lastBuildDate>Fri, 28 Sep 2018 17:35:31 +0800</lastBuildDate>
     
 	<atom:link href="https://zerolee.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>tmux 简介</title>
+      <link>https://zerolee.github.io/post/tmux/</link>
+      <pubDate>Fri, 28 Sep 2018 17:35:31 +0800</pubDate>
+      
+      <guid>https://zerolee.github.io/post/tmux/</guid>
+      <description>基础知识 配置文件 ~/.tmux.conf tmux使用C/S模型构建，主要包括以下单元模块：
+ server 服务器 :: 输入tmux命令时就开启了一个服务器。 session 会话 :: 一个服务器可以包含多个会话。 window 窗口 :: 一个会话可以包含多个窗口。 panel 面板 :: 一个窗口可以包含多个面板。  创建会话 创建一个会话
+tmux new-session -s basic 或 tmux new -s basic  创建一个会话,并后台运行
+tmux new -s basic -d  创建一个 basic 会话， 并将第一个窗口命名为 shell
+tmux new -s basic -n shell  分离会话 前缀 + d (CTRL-b d)
+查看会话 tmux list-sessions tmux ls  重新连接会话 tmux attach 如果只有一个会话的话 tmux attach -t second_session 不止一个会话  杀死会话 输入 exit ，即退出终端即可</description>
+    </item>
     
     <item>
       <title>使用 Markdown</title>
