@@ -48,6 +48,7 @@
 <li><a href="#验证">验证</a></li>
 </ul></li>
 <li><a href="#部署到-github">部署到 Github</a></li>
+<li><a href="#制作主题">制作主题</a></li>
 </ul>
 </nav>
 			
@@ -154,6 +155,27 @@
 </code></pre>
 
 <pre><code>在浏览器里面访问：http://yourGithubName.github.io/
+</code></pre>
+
+<h1 id="制作主题">制作主题</h1>
+
+<p>运行下面命令将会生成一个 themes 目录, 这个 themes 目录里有一个叫作my-theme 的文件夹</p>
+
+<p><code>hygo new theme my-theme</code></p>
+
+<pre><code>archetypes  : Content templates used in hugo new.
+layouts     : Templates used to render content in Hugo. Also see [Templates Lookup Order](https://gohugo.io/templates/lookup-order/)
+static      : Static files, such as logs, CSS and JavaScript.构建网站时该目录下所有文件会被原样复制
+theme.toml  : 主题自己的配置 
+i18n        : Language bundles
+data        : Data files 存储 Hugo 在生成网站时可以使用的配置文件
+</code></pre>
+
+<p>一个主题可以提供它自己的配置文件比如 config.toml, 有如下三个设置参数</p>
+
+<pre><code>params (global and per language)
+menu (global and per language)
+outputformats and mediatypes
 </code></pre>
 <div class="footnotes">
 
