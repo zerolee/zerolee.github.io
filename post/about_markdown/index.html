@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<title>使用 Markdown &middot; 琐碎录</title>
+		<link rel="canonical" href="https://zerolee.github.io/post/about_markdown/">
+		<link rel="stylesheet" type="text/css" href="/css/main.css" />
+		
+		
+	</head>
+	<body>
+		<a id="title" href="/" title="琐碎录">
+			
+			
+				<h1>琐碎录</h1>
+			
+		</a>
+		
+		<div id="social">
+			
+			
+			
+			
+			
+			
+                        
+		</div>
+		<div class="links">
+			<a href="/">Home</a>
+			
+				<a href="/post/">Archive</a>
+			
+			
+		</div>
+
+	<div class="postBody">
+		<div class="post">
+			<h1>使用 Markdown</h1>
+			<span class="post-meta">Fri, Sep 28, 2018 - Read in 1 Min</span>
+			<div class="content">
+			<nav id="TableOfContents">
+<ul>
+<li><a href="#标题">标题</a>
+<ul>
+<li><a href="#atx">Atx</a></li>
+<li><a href="#setext">Setext</a></li>
+</ul></li>
+<li><a href="#列表">列表</a></li>
+<li><a href="#引用和脚注">引用和脚注</a></li>
+<li><a href="#图标与链接">图标与链接</a>
+<ul>
+<li><a href="#插入链接">插入链接</a></li>
+<li><a href="#插入图片">插入图片</a></li>
+</ul></li>
+<li><a href="#粗体与斜体与删除">粗体与斜体与删除</a></li>
+<li><a href="#表格">表格</a></li>
+<li><a href="#代码框">代码框</a></li>
+<li><a href="#分割线">分割线</a></li>
+<li><a href="#标签与目录">标签与目录</a></li>
+<li><a href="#流程图">流程图</a></li>
+<li><a href="#时序图">时序图</a></li>
+</ul>
+</nav>
+			
+
+<h1 id="标题">标题</h1>
+
+<p>Markdown 支持两者标题的语法, 类 Atx 和类 Setext 形式</p>
+
+<h2 id="atx">Atx</h2>
+
+<p>文字前加 # 号即可, 总共六级标题</p>
+
+<p># 一级标题</p>
+
+<p>## 二级标题</p>
+
+<p>### 三级标题</p>
+
+<h2 id="setext">Setext</h2>
+
+<p>文字下方加 - 或者 =, 数目任意</p>
+
+<p>一级标题</p>
+
+<p><code>===</code></p>
+
+<p>二级标题</p>
+
+<p><code>---</code></p>
+
+<h1 id="列表">列表</h1>
+
+<ol>
+<li>无序列表 : 文字开头加上 - 或者 *</li>
+<li>有序列表 1. 2. 3.</li>
+</ol>
+
+<h1 id="引用和脚注">引用和脚注</h1>
+
+<p>&gt; 引用</p>
+
+<p>&gt;&gt; 嵌套引用</p>
+
+<blockquote>
+<p>引用</p>
+
+<blockquote>
+<p>嵌套引用</p>
+</blockquote>
+</blockquote>
+
+<p>文字内如[^2]</p>
+
+<p>在文章末尾[^2]:脚注说明文字</p>
+
+<h1 id="图标与链接">图标与链接</h1>
+
+<h2 id="插入链接">插入链接</h2>
+
+<p><code>[Baidu](http://baidu.com)</code>
+   <a href="http://baidu.com">Baidu</a></p>
+
+<h2 id="插入图片">插入图片</h2>
+
+<p>插入图片的地址需要图床,如 CloudApp</p>
+
+<p><code>![Mou ico](http://mouapp.com/Mou_128.png)</code></p>
+
+<p><img src="http://mouapp.com/Mou_128.png" alt="Mou ico" /></p>
+
+<h1 id="粗体与斜体与删除">粗体与斜体与删除</h1>
+
+<p>用两个 * 或者 _ 包含一段文本就是粗体的语法, 用一个则是斜体的语法</p>
+
+<ul>
+<li><p>**<strong>粗体</strong>**</p></li>
+
+<li><p>*<em>斜体</em>*</p></li>
+
+<li><p>__<strong>粗体</strong>__</p></li>
+
+<li><p>_<em>斜体</em>_</p></li>
+
+<li><p>~~<del>删除</del>~~</p></li>
+</ul>
+
+<h1 id="表格">表格</h1>
+
+<p><img src="./mtable.png" alt="table" /></p>
+
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th align="center">Are</th>
+<th align="right">Cool</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td align="center">right-aligned</td>
+<td align="right">$1600</td>
+</tr>
+
+<tr>
+<td>col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+
+<tr>
+<td>zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="代码框">代码框</h1>
+
+<p>用两个 ` 把中间的代码包裹起来即可
+       <code>code</code></p>
+
+<h1 id="分割线">分割线</h1>
+
+<p>分割线只需要另起一行,连续输入三个 * 或者 - 或者 _ 即可</p>
+
+<hr />
+
+<hr />
+
+<hr />
+
+<h1 id="标签与目录">标签与目录</h1>
+
+<p><h3 id="label">标签</h3></p>
+
+<pre><code>方法 一
+title: Markdown
+date: 2018-09-28 10:20:10
+tags: Markdown
+categories: 技术
+
+方法 二
+tags:
+- Markdown
+- 语言
+categories
+- 技术
+
+方法 三
+tags: [Markdown,语言]
+categories: [技术]
+</code></pre>
+
+<p><h3 id="content">目录</h3></p>
+
+<p>选择笔记，添加标签（显示为灰色底纹）：@(笔记本)[标签A|标签B]。</p>
+
+<p>自动生成目录（三个字母应全大写或全小写）：[TOC]。</p>
+
+<p>复选框（注意有空格）：使用- [ ]和- [x]语法可以创建复选框。</p>
+
+<h1 id="流程图">流程图</h1>
+
+<pre><code>```flow
+st=&gt;start: 开始
+en=&gt;end: 结束
+op=&gt;operation:条件
+cond=&gt;condition:Yes or No?
+
+st-&gt;op-&gt;cond
+cond(yes)-&gt;en
+cond(no)-&gt;op
+```
+</code></pre>
+
+<h1 id="时序图">时序图</h1>
+
+<pre><code>```sequence
+Alice-&gt;Bob: Hello Bob, how are your?
+Note right of Bob: Bob thinks
+Bob--&gt;Alice: I am good thanks!
+```
+</code></pre>
+
+			</div>
+		</div>
+	</div>
+		<div class="links">
+			<a href="/">Home</a>
+			
+				<a href="/post/">Archive</a>
+			
+			
+			<a href="#top">Top</a>
+		</div>
+		
+		
+	</body>
+</html>
+

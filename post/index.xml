@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 琐碎录</title>
+    <link>https://zerolee.github.io/post/</link>
+    <description>Recent content in Posts on 琐碎录</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Sep 2018 06:35:31 +0800</lastBuildDate>
+    
+	<atom:link href="https://zerolee.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用 Markdown</title>
+      <link>https://zerolee.github.io/post/about_markdown/</link>
+      <pubDate>Fri, 28 Sep 2018 06:35:31 +0800</pubDate>
+      
+      <guid>https://zerolee.github.io/post/about_markdown/</guid>
+      <description>标题 Markdown 支持两者标题的语法, 类 Atx 和类 Setext 形式
+Atx 文字前加 # 号即可, 总共六级标题
+# 一级标题
+## 二级标题
+### 三级标题
+Setext 文字下方加 - 或者 =, 数目任意
+一级标题
+===
+二级标题
+---
+列表  无序列表 : 文字开头加上 - 或者 * 有序列表 1. 2. 3.  引用和脚注 &amp;gt; 引用
+&amp;gt;&amp;gt; 嵌套引用
+ 引用
+ 嵌套引用
+  文字内如[^2]
+在文章末尾[^2]:脚注说明文字
+图标与链接 插入链接 [Baidu](http://baidu.com) Baidu
+插入图片 插入图片的地址需要图床,如 CloudApp
+![Mou ico](http://mouapp.com/Mou_128.png)
+粗体与斜体与删除 用两个 * 或者 _ 包含一段文本就是粗体的语法, 用一个则是斜体的语法</description>
+    </item>
+    
+    <item>
+      <title>利用 hugo 搭建博客</title>
+      <link>https://zerolee.github.io/post/%E5%88%A9%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 28 Sep 2018 06:20:32 +0800</pubDate>
+      
+      <guid>https://zerolee.github.io/post/%E5%88%A9%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>hugo 与 主题下载  在 hugo 下载二进制的压缩包解压了放置于 PATH 路径下即可
+ 下载自己喜欢的主题 比如 light-hugo 或者 hugo-base16-theme
+  配置  首先创建新站点(构造一个目录树1)
+hugo new site my-blog
+ 将下载好的主题放置于 my-blog/themes 目录下
+修改 my/config.toml 文件中的 themesdir 字段为 themes
+ 创建博客 post 目录：
+mkdir content/post
+ 利用 Hugo 生成你的 post(你的 blog, 以 markdown 编写而成)
+hugo new post/my-blog.md
+提交文件中包括两个部分:
+第一部分是以 &amp;mdash; 它包括了提交文档的主要数据，被称作前缀。 在前缀之后，才是正文。
++++ title = &amp;quot;First Post&amp;quot; date = 2018-09-28T06:07:10+01:00 draft = false tags = [&amp;quot;Getting started&amp;quot;] categories = [] +++ Hello world!</description>
+    </item>
+    
+  </channel>
+</rss>
