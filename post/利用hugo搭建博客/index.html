@@ -8,6 +8,10 @@
 		<link rel="stylesheet" type="text/css" href="/css/main.css" />
 		
 		
+<script src="https://zerolee.github.io/js/highlight.js"></script>
+<link rel="stylesheet" href="https://zerolee.github.io/css/github-gist.css">
+<script>hljs.initHighlightingOnLoad();</script>
+
 	</head>
 	<body>
 		<a id="title" href="/" title="琐碎录">
@@ -88,7 +92,7 @@
 <p>第一部分是以 &mdash; 它包括了提交文档的主要数据，被称作前缀。
   在前缀之后，才是正文。</p>
 
-<pre><code class="language-markdown"> +++
+<pre><code class="language-toml"> +++
  title = &quot;First Post&quot;
  date = 2018-09-28T06:07:10+01:00
  draft = false
@@ -102,7 +106,7 @@
 
 <p><code>hugo new about.md</code></p>
 
-<pre><code class="language-markdown"> +++
+<pre><code class="language-toml"> +++
  title = &quot;About&quot;
  date = 2018-03-03T13:50:49+01:00
  menu = &quot;main&quot; #Display this page on the nav menu
@@ -110,6 +114,27 @@
  meta = &quot;false&quot; #Do not display tags or categories
  +++
  正文
+</code></pre></li>
+
+<li><p>代码高亮</p>
+
+<p>点击 <a href="https://highlightjs.org/" title="highlight.js">highlight.js</a>，
+ 选择需要的高亮的语言，点击下载得到个压缩包，</p>
+
+<p>解压后将 <code>highlight.pack.js</code> 重命名为 <code>highlight.js</code> 并</p>
+
+<p>复制到 <code>my-blog/themes/light-hugo/static/js/</code> 中；</p>
+
+<p>将 <code>styles</code> 目录下的任意一个文件（比如 <code>github-gist.css</code>）</p>
+
+<p>复制到 <code>my-blog/themes/light-hugo/static/css/</code> 中。</p>
+
+<p>最后在 <code>my-blog/themes/light-hugo/layouts/partials/head.html</code> 文件中加入下面内容即可：</p>
+
+<pre><code class="language-html">&lt;!-- Highlight.js and css --&gt;
+&lt;script src=&quot;{{ .Site.BaseURL }}js/highlight.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ .Site.BaseURL }}css/github-gist.css&quot;&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script
 </code></pre></li>
 </ol>
 
