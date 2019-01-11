@@ -6,15 +6,24 @@
     <description>Recent content on 琐碎录</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_CN</language>
-    <lastBuildDate>Fri, 28 Sep 2018 17:35:31 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 12 Jan 2019 05:20:37 +0800</lastBuildDate>
     
 	<atom:link href="https://zerolee.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>About</title>
+      <link>https://zerolee.github.io/about/</link>
+      <pubDate>Sat, 12 Jan 2019 05:20:37 +0800</pubDate>
+      
+      <guid>https://zerolee.github.io/about/</guid>
+      <description>about me</description>
+    </item>
+    
+    <item>
       <title>tmux 简介</title>
       <link>https://zerolee.github.io/post/tmux/</link>
-      <pubDate>Fri, 28 Sep 2018 17:35:31 +0800</pubDate>
+      <pubDate>Sat, 12 Jan 2019 05:20:37 +0800</pubDate>
       
       <guid>https://zerolee.github.io/post/tmux/</guid>
       <description>基础知识 配置文件 ~/.tmux.conf tmux使用C/S模型构建，主要包括以下单元模块：
@@ -28,7 +37,7 @@ tmux new -s basic -n shell  分离会话 前缀 + d (CTRL-b d)
     <item>
       <title>使用 Markdown</title>
       <link>https://zerolee.github.io/post/about_markdown/</link>
-      <pubDate>Fri, 28 Sep 2018 06:35:31 +0800</pubDate>
+      <pubDate>Sat, 12 Jan 2019 05:20:37 +0800</pubDate>
       
       <guid>https://zerolee.github.io/post/about_markdown/</guid>
       <description>标题 Markdown 支持两者标题的语法, 类 Atx 和类 Setext 形式
@@ -54,18 +63,9 @@ Setext 文字下方加 - 或者 =, 数目任意
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://zerolee.github.io/about/</link>
-      <pubDate>Fri, 28 Sep 2018 06:30:37 +0800</pubDate>
-      
-      <guid>https://zerolee.github.io/about/</guid>
-      <description>about me</description>
-    </item>
-    
-    <item>
       <title>利用 hugo 搭建博客</title>
       <link>https://zerolee.github.io/post/%E5%88%A9%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Fri, 28 Sep 2018 06:20:32 +0800</pubDate>
+      <pubDate>Sat, 12 Jan 2019 05:20:37 +0800</pubDate>
       
       <guid>https://zerolee.github.io/post/%E5%88%A9%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>hugo 与 主题下载  在 hugo 下载二进制的压缩包解压了放置于 PATH 路径下即可
