@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<title>网址搜集 &middot; 琐碎录</title>
+		<link rel="canonical" href="http://zerolee.github.io/post/%E4%B8%80%E4%BA%9B%E7%BD%91%E5%9D%80%E6%90%9C%E9%9B%86/">
+		<link rel="stylesheet" type="text/css" href="/css/main.css" />
+		
+		
+<script src="http://zerolee.github.io/js/highlight.js"></script>
+<link rel="stylesheet" href="http://zerolee.github.io/css/github-gist.css">
+<script>hljs.initHighlightingOnLoad();</script>
+
+	</head>
+	<body>
+		<a id="title" href="/" title="琐碎录">
+			
+			
+				<h1>琐碎录</h1>
+			
+		</a>
+		
+			<h4>努力的活着, 努力的记录着</h4>
+		
+		<div id="social">
+			
+			
+			
+			
+			
+			
+                        
+		</div>
+		<div class="links">
+			<a href="/">Home</a>
+			
+				<a href="/post/">Archive</a>
+			
+			
+		</div>
+
+	<div class="postBody">
+		<div class="post">
+			<h1>网址搜集</h1>
+			<span class="post-meta">Fri, Apr 29, 2022 - Read in 1 Min</span>
+			<div class="content">
+			<nav id="TableOfContents">
+  <ul>
+    <li><a href="#库">库</a>
+      <ul>
+        <li><a href="#iter2httpsgithubcomdoublepiter2-"><a href="https://github.com/doublep/iter2">iter2</a></a></li>
+        <li><a href="#asyncawait-for-emacshttpsgithubcomchuntaroemacs-async-await-"><a href="https://github.com/chuntaro/emacs-async-await">Async/Await for Emacs</a></a></li>
+        <li><a href="#promisesa-for-emacshttpsgithubcomchuntaroemacs-promise-"><a href="https://github.com/chuntaro/emacs-promise">Promises/A+ for Emacs</a></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+			<h1 id="emacs">Emacs</h1>
+<h2 id="库">库</h2>
+<h3 id="iter2httpsgithubcomdoublepiter2-"><a href="https://github.com/doublep/iter2">iter2</a></h3>
+<p><code>iter2</code> 是一个对自带的 <code>generator</code> 完全兼容的实现，它提供用 <code>iter2-defun</code> 和 <code>iter2-lambda</code><br>
+替代自带的 <code>iter-defun</code> 和 <code>iter-lambda</code>。<br>
+至于其他的函数或者宏(如： <code>iter-yield</code>, <code>iter-next</code>) 用自带的就好了。</p>
+<p>优点:</p>
+<ul>
+<li>
+<p>支持 <code>save-excursion</code> 以及类似的 similar special forms 以及宏 <code>save-match-data</code>。</p>
+</li>
+<li>
+<p>生成器函数可以使用 Edebug 进行调试。</p>
+</li>
+<li>
+<p>更快地转换复杂的生成器函数。</p>
+</li>
+<li>
+<p>通常更快的结果函数。</p>
+</li>
+<li>
+<p>生成的代码要小得多，尤其是对于复杂的函数。</p>
+</li>
+<li>
+<p>更具可读性的结果函数和回溯。</p>
+</li>
+<li>
+<p>对生成的迭代器函数的内置跟踪支持。</p>
+</li>
+</ul>
+<p>缺点</p>
+<ul>
+<li>因为iter2转换被高度优化，它不像原始generator包那样通用，因此更容易出现错误。</li>
+</ul>
+<h3 id="asyncawait-for-emacshttpsgithubcomchuntaroemacs-async-await-"><a href="https://github.com/chuntaro/emacs-async-await">Async/Await for Emacs</a></h3>
+<p>这是受 TypeScript 的 Async/Await 实现启发的的一个简单实现。</p>
+<p>依赖于自带的 <code>generator.el</code> 和 第三方 <a href="https://github.com/chuntaro/emacs-promise">promise.el</a>、
+<a href="https://github.com/doublep/iter2">iter2</a><br>
+详细教程，请参阅 <a href="https://devblogs.microsoft.com/typescript/what-about-async-await/">What about Async/Await?</a> (TypeScript)</p>
+<h3 id="promisesa-for-emacshttpsgithubcomchuntaroemacs-promise-"><a href="https://github.com/chuntaro/emacs-promise">Promises/A+ for Emacs</a></h3>
+<p>这是<a href="https://promisesaplus.com/">Promises/A+</a>的简单实现，移植自 <a href="https://github.com/then/promise">https://github.com/then/promise</a></p>
+<ul>
+<li>可以使用与 JavaScript 版本 Promise 相同的 API。</li>
+<li>then，catch、resolve、reject、all、race 等等……</li>
+<li>支持 “thenable”</li>
+<li>支持 “Inheritance of Promise”</li>
+<li>支持 “rejection-tracking”</li>
+</ul>
+<p>详细教程，请参阅: <a href="http://www.promisejs.org/">www.promisejs.org</a> (JavaScript).</p>
+<p><em>Promises/A+ for Emacs</em> 被用于 <a href="https://github.com/chuntaro/emacs-async-await">Async/Await for Emacs</a>, 因此您可以使用 Async/Await 进行异步编程。.</p>
+
+			</div>
+		</div>
+	</div>
+		<div class="links">
+			<a href="/">Home</a>
+			
+				<a href="/post/">Archive</a>
+			
+			
+			<a href="#top">Top</a>
+		</div>
+		
+		
+	</body>
+</html>
+

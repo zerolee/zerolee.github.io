@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.53" />
+	<meta name="generator" content="Hugo 0.68.0" />
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 		<title>琐碎录 &middot; 琐碎录</title>
-		<link rel="canonical" href="https://zerolee.github.io/">
+		<link rel="canonical" href="http://zerolee.github.io/">
 		<link rel="stylesheet" type="text/css" href="/css/main.css" />
 		
-			<link href="https://zerolee.github.io/index.xml" rel="alternative" type="application/rss+xml" title="琐碎录" />
+			<link href="http://zerolee.github.io/index.xml" rel="alternative" type="application/rss+xml" title="琐碎录" />
 		
 		
-<script src="https://zerolee.github.io/js/highlight.js"></script>
-<link rel="stylesheet" href="https://zerolee.github.io/css/github-gist.css">
+<script src="http://zerolee.github.io/js/highlight.js"></script>
+<link rel="stylesheet" href="http://zerolee.github.io/css/github-gist.css">
 <script>hljs.initHighlightingOnLoad();</script>
 
 	</head>
@@ -45,101 +45,25 @@
 
 	
 		
-	
-		
 			<div class="postBody">
 	<article class="post">
 		<header>
 			<h1>
-				<a href="/post/tmux/">tmux 简介 </a>
+				<a href="/post/">Posts </a>
 			</h1>
 			<span class="post-meta">
-				Sat, Jan 12, 2019 - Read in 1 Min
+				Fri, Apr 29, 2022 - Read in 0 Min
 			</span>
 		</header>
 		<div class="summary">
-			基础知识 配置文件 ~/.tmux.conf tmux使用C/S模型构建，主要包括以下单元模块：
- server 服务器 :: 输入tmux命令时就开启了一个服务器。 session 会话 :: 一个服务器可以包含多个会话。 window 窗口 :: 一个会话可以包含多个窗口。 panel 面板 :: 一个窗口可以包含多个面板。  创建会话 创建一个会话
-tmux new-session -s basic 或 tmux new -s basic  创建一个会话,并后台运行
-tmux new -s basic -d  创建一个 basic 会话， 并将第一个窗口命名为 shell
-tmux new -s basic -n shell  分离会话 前缀 + d (CTRL-b d)
-查看会话 tmux list-sessions tmux ls  重新连接会话 tmux attach 如果只有一个会话的话 tmux attach -t second_session 不止一个会话  杀死会话 输入 exit ，即退出终端即可
-			<a href="/post/tmux/">Read more...</a>
+			
+			<a href="/post/">Read more...</a>
 		</div>
 	</article>
 </div>
 
 		
 	
-		
-			<div class="postBody">
-	<article class="post">
-		<header>
-			<h1>
-				<a href="/post/about_markdown/">使用 Markdown </a>
-			</h1>
-			<span class="post-meta">
-				Sat, Jan 12, 2019 - Read in 1 Min
-			</span>
-		</header>
-		<div class="summary">
-			标题 Markdown 支持两者标题的语法, 类 Atx 和类 Setext 形式
-Atx 文字前加 # 号即可, 总共六级标题
-# 一级标题
-## 二级标题
-### 三级标题
-Setext 文字下方加 - 或者 =, 数目任意
-一级标题
-===
-二级标题
----
-列表  无序列表 : 文字开头加上 - 或者 * 有序列表 1. 2. 3.  引用和脚注 &gt; 引用
-&gt;&gt; 嵌套引用
- 引用
- 嵌套引用
-  文字内如[^2]
-在文章末尾[^2]:脚注说明文字
-图标与链接 插入链接 [Baidu](http://baidu.com) Baidu
-插入图片 插入图片的地址需要图床,如 CloudApp
-![Mou ico](http://mouapp.com/Mou_128.png)
-粗体与斜体与删除 用两个 * 或者 _ 包含一段文本就是粗体的语法, 用一个则是斜体的语法
-			<a href="/post/about_markdown/">Read more...</a>
-		</div>
-	</article>
-</div>
-
-		
-	
-		
-			<div class="postBody">
-	<article class="post">
-		<header>
-			<h1>
-				<a href="/post/%E5%88%A9%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">利用 hugo 搭建博客 </a>
-			</h1>
-			<span class="post-meta">
-				Sat, Jan 12, 2019 - Read in 2 Min
-			</span>
-		</header>
-		<div class="summary">
-			hugo 与 主题下载  在 hugo 下载二进制的压缩包解压了放置于 PATH 路径下即可
- 下载自己喜欢的主题 比如 light-hugo 或者 hugo-base16-theme
-  配置  首先创建新站点(构造一个目录树1)
-hugo new site my-blog
- 将下载好的主题放置于 my-blog/themes 目录下
-修改 my/config.toml 文件中的 themesdir 字段为 themes
- 创建博客 post 目录：
-mkdir content/post
- 利用 Hugo 生成你的 post(你的 blog, 以 markdown 编写而成)
-hugo new post/my-blog.md
-提交文件中包括两个部分:
-第一部分是以 &mdash; 它包括了提交文档的主要数据，被称作前缀。 在前缀之后，才是正文。
-+++ title = &quot;First Post&quot; date = 2018-09-28T06:07:10+01:00 draft = false tags = [&quot;Getting started&quot;] categories = [] +++ Hello world!
-			<a href="/post/%E5%88%A9%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">Read more...</a>
-		</div>
-	</article>
-</div>
-
 		
 	
 		<div class="links">

@@ -4,12 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 		<title>利用 hugo 搭建博客 &middot; 琐碎录</title>
-		<link rel="canonical" href="https://zerolee.github.io/post/%E5%88%A9%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+		<link rel="canonical" href="http://zerolee.github.io/post/%E5%88%A9%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
 		<link rel="stylesheet" type="text/css" href="/css/main.css" />
 		
 		
-<script src="https://zerolee.github.io/js/highlight.js"></script>
-<link rel="stylesheet" href="https://zerolee.github.io/css/github-gist.css">
+<script src="http://zerolee.github.io/js/highlight.js"></script>
+<link rel="stylesheet" href="http://zerolee.github.io/css/github-gist.css">
 <script>hljs.initHighlightingOnLoad();</script>
 
 	</head>
@@ -46,53 +46,44 @@
 			<span class="post-meta">Sat, Jan 12, 2019 - Read in 2 Min</span>
 			<div class="content">
 			<nav id="TableOfContents">
-<ul>
-<li><a href="#hugo-与-主题下载">hugo 与 主题下载</a></li>
-<li><a href="#配置">配置</a>
-<ul>
-<li><a href="#调整">调整</a></li>
-<li><a href="#验证">验证</a></li>
-</ul></li>
-<li><a href="#部署到-github">部署到 Github</a></li>
-<li><a href="#制作主题">制作主题</a></li>
-</ul>
+  <ul>
+    <li><a href="#调整">调整</a></li>
+    <li><a href="#验证">验证</a></li>
+  </ul>
 </nav>
-			
-
-<h1 id="hugo-与-主题下载">hugo 与 主题下载</h1>
-
+			<h1 id="hugo-与-主题下载">hugo 与 主题下载</h1>
 <ol>
-<li><p>在 <a href="https://github.com/gohugoio/hugo/releases">hugo</a> 下载二进制的压缩包解压了放置于 PATH 路径下即可</p></li>
-
-<li><p>下载自己喜欢的<a href="https://themes.gohugo.io/">主题</a>
-比如 <a href="https://github.com/tblyler/light-hugo">light-hugo</a> 或者 <a href="https://github.com/htdvisser/hugo-base16-theme">hugo-base16-theme</a></p></li>
+<li>
+<p>在 [hugo] (<a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a>) 下载二进制的压缩包解压了放置于 PATH 路径下即可</p>
+</li>
+<li>
+<p>下载自己喜欢的<a href="https://themes.gohugo.io/">主题</a>
+比如 <a href="https://github.com/tblyler/light-hugo">light-hugo</a> 或者 <a href="https://github.com/htdvisser/hugo-base16-theme">hugo-base16-theme</a></p>
+</li>
 </ol>
-
 <h1 id="配置">配置</h1>
-
 <ol>
-<li><p>首先创建新站点(构造一个目录树<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>)</p>
-
-<p><code>hugo new site my-blog</code></p></li>
-
-<li><p>将下载好的主题放置于 <code>my-blog/themes</code> 目录下</p>
-
-<p>修改 <code>my/config.toml</code> 文件中的 <code>themesdir</code> 字段为 <code>themes</code></p></li>
-
-<li><p>创建博客 post 目录：</p>
-
-<p><code>mkdir content/post</code></p></li>
-
-<li><p>利用 Hugo 生成你的 post(你的 blog, 以 markdown 编写而成)</p>
-
+<li>
+<p>首先创建新站点(构造一个目录树<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>)</p>
+<p><code>hugo new site my-blog</code></p>
+</li>
+<li>
+<p>将下载好的主题放置于 <code>my-blog/themes</code> 目录下</p>
+<p>修改 <code>my/config.toml</code> 文件中的 <code>themesdir</code> 字段为 <code>themes</code></p>
+</li>
+<li>
+<p>创建博客 post 目录：</p>
+<p><code>mkdir content/post</code></p>
+</li>
+<li>
+<p>利用 Hugo 生成你的 post(你的 blog, 以 markdown 编写而成)</p>
 <p><code>hugo new post/my-blog.md</code></p>
-
 <p>提交文件中包括两个部分:</p>
-
 <p>第一部分是以 &mdash; 它包括了提交文档的主要数据，被称作前缀。
-  在前缀之后，才是正文。</p>
-
-<pre><code class="language-toml"> +++
+在前缀之后，才是正文。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"></code></pre></div></li>
+</ol>
+<pre><code> +++
  title = &quot;First Post&quot;
  date = 2018-09-28T06:07:10+01:00
  draft = false
@@ -100,13 +91,16 @@
  categories = []
  +++
  Hello  world!
-</code></pre></li>
-
-<li><p>添加 About 页面</p>
-
+ ```
+</code></pre>
+<ol start="5">
+<li>
+<p>添加 About 页面</p>
 <p><code>hugo new about.md</code></p>
-
-<pre><code class="language-toml"> +++
+</li>
+</ol>
+<pre><code> ```toml
+ +++
  title = &quot;About&quot;
  date = 2018-03-03T13:50:49+01:00
  menu = &quot;main&quot; #Display this page on the nav menu
@@ -114,110 +108,76 @@
  meta = &quot;false&quot; #Do not display tags or categories
  +++
  正文
-</code></pre></li>
-
-<li><p>代码高亮</p>
-
-<p>点击 <a href="https://highlightjs.org/" title="highlight.js">highlight.js</a>，
- 选择需要的高亮的语言，点击下载得到个压缩包，</p>
-
-<p>解压后将 <code>highlight.pack.js</code> 重命名为 <code>highlight.js</code> 并</p>
-
-<p>复制到 <code>my-blog/themes/light-hugo/static/js/</code> 中；</p>
-
-<p>将 <code>styles</code> 目录下的任意一个文件（比如 <code>github-gist.css</code>）</p>
-
-<p>复制到 <code>my-blog/themes/light-hugo/static/css/</code> 中。</p>
-
-<p>最后在 <code>my-blog/themes/light-hugo/layouts/partials/head.html</code> 文件中加入下面内容即可：</p>
-
-<pre><code class="language-html">&lt;!-- Highlight.js and css --&gt;
-&lt;script src=&quot;{{ .Site.BaseURL }}js/highlight.js&quot;&gt;&lt;/script&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ .Site.BaseURL }}css/github-gist.css&quot;&gt;
-&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script
-</code></pre></li>
-</ol>
-
-<h2 id="调整">调整</h2>
-
-<p>添加主菜单, 将 Home 和 Posts 添加到主菜单中。</p>
-
-<p>打开 config.toml 文件，在末尾插入如下一段：</p>
-
-<pre><code class="language-toml">   [[menu.main]]
-   name = &quot;Home&quot; #Name in the navigation bar
-   weight = 10 #The larger the weight, the more on the right this item will be
-   url = &quot;/&quot; #URL address
-   [[menu.main]]
-   name = &quot;Posts&quot;
-   weight = 20
-   url = &quot;/posts/&quot;
+  ```
 </code></pre>
-
-<h2 id="验证">验证</h2>
-
+<ol start="6">
+<li>
+<p>代码高亮</p>
+<p>点击 <a href="https://highlightjs.org/" title="highlight.js">highlight.js</a>，
+选择需要的高亮的语言，点击下载得到个压缩包，</p>
+<p>解压后将 <code>highlight.pack.js</code> 重命名为 <code>highlight.js</code> 并</p>
+<p>复制到 <code>my-blog/themes/light-hugo/static/js/</code> 中；</p>
+<p>将 <code>styles</code> 目录下的任意一个文件（比如 <code>github-gist.css</code>）</p>
+<p>复制到 <code>my-blog/themes/light-hugo/static/css/</code> 中。</p>
+<p>最后在 <code>my-blog/themes/light-hugo/layouts/partials/head.html</code> 文件中加入下面内容即可：
+<code>html &lt;!-- Highlight.js and css --&gt; &lt;script src=&quot;{{ .Site.BaseURL }}js/highlight.js&quot;&gt;&lt;/script&gt; &lt;link rel=&quot;stylesheet&quot; href=&quot;{{ .Site.BaseURL }}css/github-gist.css&quot;&gt; &lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;</code></p>
+</li>
+</ol>
+<h2 id="调整">调整</h2>
+<p>添加主菜单, 将 Home 和 Posts 添加到主菜单中。</p>
+<p>打开 config.toml 文件，在末尾插入如下一段：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Home&#34;</span> <span style="color:#75715e">#Name in the navigation bar</span>
+<span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">10</span> <span style="color:#75715e">#The larger the weight, the more on the right this item will be</span>
+<span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#75715e">#URL address</span>
+[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Posts&#34;</span>
+<span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">20</span>
+<span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/posts/&#34;</span>
+</code></pre></div><h2 id="验证">验证</h2>
 <pre><code>你可以选择可视化的方式启动服务器来验证主题是否生效：hugo server -D 
 然后在浏览器中输入 http://localhost:1313
 可用通过在终端中输入 Crtl+C 来停止服务器运行。
 </code></pre>
-
 <h1 id="部署到-github">部署到 Github</h1>
-
 <p>首先在 github 里面创建一个命名为 <a href="http://yourGithubName.github.io">http://yourGithubName.github.io</a> 的仓库。</p>
-
 <p>在站点根目录执行</p>
-
-<pre><code class="language-bash">   hugo --theme=light-hugo --baseUrl=&quot;http://yourGithubName.github.io/&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo --theme<span style="color:#f92672">=</span>light-hugo --baseUrl<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://yourGithubName.github.io/&#34;</span>
+</code></pre></div><p>如果未生成任何文章,请去掉文章头部的 <code>draft=true</code> 在重新生成
+将 public 目录里的所有文件 <code>push</code> 到刚创建的 Repository</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd public
+git init
+git remote add origin https://github.com/yourGithubName/yourGithubName.github.io.git
+git add -A
+git commit -m <span style="color:#e6db74">&#34;first commit&#34;</span>
+git push -u origin master 
+</code></pre></div><pre><code>在浏览器里面访问：http://yourGithubName.github.io/
 </code></pre>
-
-<p>如果未生成任何文章,请去掉文章头部的 <code>draft=true</code> 在重新生成
-   将 public 目录里的所有文件 <code>push</code> 到刚创建的 Repository</p>
-
-<pre><code class="language-bash">   cd public
-   git init
-   git remote add origin https://github.com/yourGithubName/yourGithubName.github.io.git
-   git add -A
-   git commit -m &quot;first commit&quot;
-   git push -u origin master 
-</code></pre>
-
-<pre><code>在浏览器里面访问：http://yourGithubName.github.io/
-</code></pre>
-
 <h1 id="制作主题">制作主题</h1>
-
 <p>运行下面命令将会生成一个 themes 目录, 这个 themes 目录里有一个叫作my-theme 的文件夹</p>
-
 <p><code>hygo new theme my-theme</code></p>
-
 <pre><code>archetypes  : Content templates used in hugo new.
 layouts     : Templates used to render content in Hugo. Also see [Templates Lookup Order](https://gohugo.io/templates/lookup-order/)
 static      : Static files, such as logs, CSS and JavaScript.构建网站时该目录下所有文件会被原样复制
 theme.toml  : 主题自己的配置 
 i18n        : Language bundles
 data        : Data files 存储 Hugo 在生成网站时可以使用的配置文件
-</code></pre>
-
-<p>一个主题可以提供它自己的配置文件比如 config.toml, 有如下三个设置参数</p>
-
+</code></pre><p>一个主题可以提供它自己的配置文件比如 config.toml, 有如下三个设置参数</p>
 <pre><code>params (global and per language)
 menu (global and per language)
 outputformats and mediatypes
-</code></pre>
-<div class="footnotes">
-
-<hr />
-
+</code></pre><section class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:1"><p>目录结构简介</p>
-
+<li id="fn:1" role="doc-endnote">
+<p>目录结构简介</p>
 <p>config.toml : 一般的配置信息写在里面,
 content     : 文章存放处,
 archetypes  : 里面一般放的是使用 hugo new 生成页面的时候头部配置信息格式,
-themes      : 里面放的是你需要的主题。</p>
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+themes      : 里面放的是你需要的主题。 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
-</div>
+</section>
 
 			</div>
 		</div>

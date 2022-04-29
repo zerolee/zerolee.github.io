@@ -4,12 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 		<title>tmux 简介 &middot; 琐碎录</title>
-		<link rel="canonical" href="https://zerolee.github.io/post/tmux/">
+		<link rel="canonical" href="http://zerolee.github.io/post/tmux/">
 		<link rel="stylesheet" type="text/css" href="/css/main.css" />
 		
 		
-<script src="https://zerolee.github.io/js/highlight.js"></script>
-<link rel="stylesheet" href="https://zerolee.github.io/css/github-gist.css">
+<script src="http://zerolee.github.io/js/highlight.js"></script>
+<link rel="stylesheet" href="http://zerolee.github.io/css/github-gist.css">
 <script>hljs.initHighlightingOnLoad();</script>
 
 	</head>
@@ -46,161 +46,67 @@
 			<span class="post-meta">Sat, Jan 12, 2019 - Read in 1 Min</span>
 			<div class="content">
 			<nav id="TableOfContents">
-<ul>
-<li><a href="#基础知识">基础知识</a>
-<ul>
-<li><a href="#创建会话">创建会话</a></li>
-<li><a href="#分离会话">分离会话</a></li>
-<li><a href="#查看会话">查看会话</a></li>
-<li><a href="#重新连接会话">重新连接会话</a></li>
-<li><a href="#杀死会话">杀死会话</a></li>
-</ul></li>
-<li><a href="#配置-tmux">配置 tmux</a>
-<ul>
-<li><a href="#配置状态栏">配置状态栏</a>
-<ul>
-<li><a href="#状态栏变量">状态栏变量</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#创建会话">创建会话</a></li>
+    <li><a href="#分离会话">分离会话</a></li>
+    <li><a href="#查看会话">查看会话</a></li>
+    <li><a href="#重新连接会话">重新连接会话</a></li>
+    <li><a href="#杀死会话">杀死会话</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#配置状态栏">配置状态栏</a>
+      <ul>
+        <li><a href="#状态栏变量">状态栏变量</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
-			
-
-<h1 id="基础知识">基础知识</h1>
-
+			<h1 id="基础知识">基础知识</h1>
 <p>配置文件 ~/.tmux.conf
 tmux使用C/S模型构建，主要包括以下单元模块：</p>
-
 <ol>
 <li>server 服务器 :: 输入tmux命令时就开启了一个服务器。</li>
 <li>session  会话 :: 一个服务器可以包含多个会话。</li>
 <li>window   窗口 :: 一个会话可以包含多个窗口。</li>
 <li>panel    面板 :: 一个窗口可以包含多个面板。</li>
 </ol>
-
 <h2 id="创建会话">创建会话</h2>
-
 <p>创建一个会话</p>
-
-<pre><code class="language-bash">tmux new-session -s basic 或
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tmux new-session -s basic 或
 tmux new -s basic
-</code></pre>
-
-<p>创建一个会话,并后台运行</p>
-
-<pre><code class="language-bash">tmux new -s basic -d
-</code></pre>
-
-<p>创建一个 basic 会话， 并将第一个窗口命名为 shell</p>
-
-<pre><code class="language-bash">tmux new -s basic -n shell
-</code></pre>
-
-<h2 id="分离会话">分离会话</h2>
-
+</code></pre></div><p>创建一个会话,并后台运行</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tmux new -s basic -d
+</code></pre></div><p>创建一个 basic 会话， 并将第一个窗口命名为 shell</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tmux new -s basic -n shell
+</code></pre></div><h2 id="分离会话">分离会话</h2>
 <p>前缀 + d (CTRL-b d)</p>
-
 <h2 id="查看会话">查看会话</h2>
-
-<pre><code class="language-bash">tmux list-sessions
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tmux list-sessions
 tmux ls
-</code></pre>
-
-<h2 id="重新连接会话">重新连接会话</h2>
-
-<pre><code class="language-bash">tmux attach 如果只有一个会话的话
+</code></pre></div><h2 id="重新连接会话">重新连接会话</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tmux attach 如果只有一个会话的话
 tmux attach -t second_session 不止一个会话
-</code></pre>
-
-<h2 id="杀死会话">杀死会话</h2>
-
+</code></pre></div><h2 id="杀死会话">杀死会话</h2>
 <p>输入 exit ，即退出终端即可</p>
-
-<pre><code class="language-bash">tmux kill-session -t basic
-</code></pre>
-
-<h1 id="配置-tmux">配置 tmux</h1>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tmux kill-session -t basic
+</code></pre></div><h1 id="配置-tmux">配置 tmux</h1>
 <h2 id="配置状态栏">配置状态栏</h2>
-
 <h3 id="状态栏变量">状态栏变量</h3>
-
-<p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides"></p>
-
-<p><colgroup>
-<col  class="org-left" /></p>
-
-<p><col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">变量</th>
-<th scope="col" class="org-left">描述</th>
-</tr>
-</thead></p>
-
-<p><tbody>
-<tr>
-<td class="org-left">#H</td>
-<td class="org-left">本地主机的主机名</td>
-</tr></p>
-
-<p><tr>
-<td class="org-left">#h</td>
-<td class="org-left">本地主机的主机名， 没有 domain</td>
-</tr></p>
-
-<p><tr>
-<td class="org-left">#F</td>
-<td class="org-left">当前窗口的标签</td>
-</tr></p>
-
-<p><tr>
-<td class="org-left">#I</td>
-<td class="org-left">当前窗口的索引</td>
-</tr></p>
-
-<p><tr>
-<td class="org-left">#P</td>
-<td class="org-left">当前面板的索引</td>
-</tr></p>
-
-<p><tr>
-<td class="org-left">#S</td>
-<td class="org-left">当前会话的名称</td>
-</tr></p>
-
-<p><tr>
-<td class="org-left">#T</td>
-<td class="org-left">当前窗口的标题</td>
-</tr></p>
-
-<p><tr>
-<td class="org-left">#W</td>
-<td class="org-left">当前窗口的名称</td>
-</tr></p>
-
-<p><tr>
-<td class="org-left">##</td>
-<td class="org-left">一个 # 符号</td>
-</tr></p>
-
-<p><tr>
-<td class="org-left">#(shell-command) shell</td>
-<td class="org-left">命令的第一行输出</td>
-</tr></p>
-
-<p><tr>
-<td class="org-left">#[attributes]</td>
-<td class="org-left">要改变的颜色或属性</td>
-</tr>
-</tbody>
-</table></p>
-
-<pre><code class="language-bash">set -g status-left &quot;#[fg=green]#S&quot;
-</code></pre>
-
-<p>设置左侧为前景色和会话名称</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
 			</div>
 		</div>
